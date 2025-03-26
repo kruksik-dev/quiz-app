@@ -1,0 +1,30 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.add-question-btn {
+  padding: 15px 30px;
+  background: #6200ea;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-question-btn:hover {
+  background: #3700b3;
+}
