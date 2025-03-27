@@ -10,7 +10,7 @@ const QuizCard = ({ question, onNext }) => {
 
     const checkAnswer = async (index) => {
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/check_answer/`, null, {
+            const response = await axios.post(`${window.__RUNTIME_CONFIG__.API_URL}/check_answer/`, null, {
                 params: { question_id: question.id, selected_option: index }
             });
             setResult(response.data.message);
@@ -33,6 +33,13 @@ const QuizCard = ({ question, onNext }) => {
         onNext(); 
     };
 
+    const options = [
+        question.option_1,
+        question.option_2,
+        question.option_3,
+        question.option_4
+    ].filter(option => option !== undefined);
+
     return (
         <motion.div
             className="quiz-card"
@@ -43,7 +50,7 @@ const QuizCard = ({ question, onNext }) => {
             <div className="quiz-header">Pytanie</div>
             <div className="quiz-question">{question.question}</div>
             <div className="quiz-options">
-                {question.options.map((option, index) => (
+                {options.map((option, index) => (
                     <motion.button
                         key={index}
                         className={`quiz-option ${selected === index + 1 ? 'selected' : ''}`}

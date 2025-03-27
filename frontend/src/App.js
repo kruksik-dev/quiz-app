@@ -7,7 +7,7 @@ import QuizCard from './components/QuizCard';
 
 
 const MemoizedParticlesBg = React.memo(() => (
-  <ParticlesBg type="random" bg={true} />
+  <ParticlesBg type="random" num={25}  bg={true} />
 ));
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/random_question/`, {
+      const response = await axios.get(`${window.__RUNTIME_CONFIG__.API_URL}/random_question/`, {
         withCredentials: true,
       });
       setQuestion(response.data);
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   const handleAddQuestion = async (formData) => {
-    await axios.post(`${process.env.REACT_APP_API_URL}/question/`, null, { params: formData });
+    await axios.post(`${window.__RUNTIME_CONFIG__.API_URL}/question/`, null, { params: formData });
     setShowPopup(false);
     fetchQuestion();
   };
@@ -42,7 +42,6 @@ const App = () => {
     const handleKeyDown = (e) => {
 
       if (e.shiftKey && e.key === 'Q') {
-        console.log('Ctrl + Shift + Q detected!');
         setShowAddButton((prevState) => !prevState);
       }
     };
