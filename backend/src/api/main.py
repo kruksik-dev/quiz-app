@@ -4,13 +4,12 @@ import random
 from contextlib import asynccontextmanager
 from typing import AsyncIterator
 
+from src.database.model import Question
+from src.database.database import init_db, get_db
 from fastapi import Cookie, Depends, FastAPI, File, HTTPException, Response, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
-
-from backend.database.database import get_db, init_db
-from backend.database.model import Question
 
 
 @asynccontextmanager
@@ -104,7 +103,7 @@ async def get_all_questions(
 @app.post("/add_bulk_questions/", response_model=list[Question])
 async def add_questions_from_csv(
     csv_file: UploadFile = File(...), db: AsyncSession = Depends(get_db)
-):
+) -> list[Question]:
     if csv_file.content_type != "text/csv":
         raise HTTPException(
             status_code=400, detail="Invalid file type. Please upload a CSV file."
@@ -115,16 +114,16 @@ async def add_questions_from_csv(
     reader = csv.DictReader(io.StringIO(content))
 
     questions = []
-
+    required_columns = {
+        "question",
+        "option_1",
+        "option_2",
+        "option_3",
+        "option_4",
+        "correct_option",
+    }
     for row in reader:
-        if (
-            "question" not in row
-            or "option_1" not in row
-            or "option_2" not in row
-            or "option_3" not in row
-            or "option_4" not in row
-            or "correct_option" not in row
-        ):
+        if not required_columns.issubset(row.keys()):
             raise HTTPException(
                 status_code=400, detail="CSV file is missing required columns."
             )
@@ -136,11 +135,7 @@ async def add_questions_from_csv(
             )
 
         new_question = Question(
-            question=row["question"],
-            option_1=row["option_1"],
-            option_2=row["option_2"],
-            option_3=row["option_3"],
-            option_4=row["option_4"],
+            **{key: row[key] for key in required_columns if key != "correct_option"},
             correct_option=correct_option,
         )
         db.add(new_question)
@@ -184,9 +179,9 @@ async def check_answer(
     if not question:
         raise HTTPException(status_code=404, detail="Question not found")
     if selected_option == question.correct_option:
-        return {"correct": True, "message": "Poprawna odpowiedź !"}
+        return {"correct": True, "message": "Correct answer !"}
     else:
         return {
             "correct": False,
-            "message": "Zła odpowiedź :( ",
+            "message": "Wrong answer :( ",
         }

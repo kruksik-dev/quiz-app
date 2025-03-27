@@ -9,12 +9,12 @@ engine = create_async_engine(DATABASE_URL, connect_args={"check_same_thread": Fa
 
 
 async def init_db() -> None:
-    """Inicjalizacja bazy danych."""
+    """Init database"""
     async with engine.begin() as conn:
         await conn.run_sync(SQLModel.metadata.create_all)
 
 
 async def get_db() -> AsyncGenerator[AsyncSession, Any]:
-    """Generator sesji bazy danych."""
+    """Generate database session"""
     async with AsyncSession(engine) as session:
         yield session
