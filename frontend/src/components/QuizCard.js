@@ -47,7 +47,7 @@ const QuizCard = ({ question, onNext }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="quiz-header">Pytanie</div>
+            <div className="quiz-header">Question</div>
             <div className="quiz-question">{question.question}</div>
             <div className="quiz-options">
                 {options.map((option, index) => (
@@ -73,7 +73,7 @@ const QuizCard = ({ question, onNext }) => {
                 whileTap={{ scale: 0.95 }}
                 onClick={handleNext}
             >
-                Następne pytanie
+                Next Question
             </motion.button>
         </motion.div>
     );
