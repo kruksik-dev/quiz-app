@@ -1,6 +1,19 @@
 # Quiz App 🎉
 
+![React](https://img.shields.io/badge/React-18.2.0-blue?style=flat-square&logo=react) 
+![FastAPI](https://img.shields.io/badge/FastAPI-0.95.2-green?style=flat-square&logo=fastapi) 
+![Docker](https://img.shields.io/badge/Docker-20.10.21-blue?style=flat-square&logo=docker) 
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
+
 Welcome to the **Quiz App**, a modern and interactive platform for creating, managing, and playing quizzes. This project is built with a robust backend and a dynamic frontend to deliver a seamless user experience.
+
+---
+
+## 🌐 Live Demo
+
+🚀 **Experience the Quiz App live!**  
+Check out the live demo hosted on GitHub Pages:  
+👉 [https://kruksik-dev.github.io/quiz-app/](https://kruksik-dev.github.io/quiz-app/)
 
 ---
 
@@ -113,7 +126,6 @@ quiz-app/
 
 ---
 
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -137,6 +149,5 @@ Contributions are welcome! Please follow these steps:
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 
 Enjoy the Quiz App! 🎉
