@@ -1,0 +1,229 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "Which decorator in Flask is used to route URLs to functions?",
+            "option_1": "@app.url",
+            "option_2": "@app.route",
+            "option_3": "@app.endpoint",
+            "option_4": "@app.path",
+            "correct_option": 2
+        },
+        {
+            "id": 2,
+            "question": "What is the primary purpose of Django's ORM?",
+            "option_1": "To handle HTTP requests",
+            "option_2": "To interact with databases using Python",
+            "option_3": "To create user interfaces",
+            "option_4": "To manage virtual environments",
+            "correct_option": 2
+        },
+        {
+            "id": 3,
+            "question": "Which Python library is commonly used for handling environment variables?",
+            "option_1": "dotenv",
+            "option_2": "envvars",
+            "option_3": "python-dotenv",
+            "option_4": "os-env",
+            "correct_option": 3
+        },
+        {
+            "id": 4,
+            "question": "What does WSGI stand for in Python web development?",
+            "option_1": "Web Server Gateway Interface",
+            "option_2": "Web Service Gateway Integration",
+            "option_3": "Website Server Gateway Interface",
+            "option_4": "Web Standard Gateway Interface",
+            "correct_option": 1
+        },
+        {
+            "id": 5,
+            "question": "Which command is used to create a new Django project?",
+            "option_1": "django new project",
+            "option_2": "django-admin startproject",
+            "option_3": "python -m django create",
+            "option_4": "django init",
+            "correct_option": 2
+        },
+        {
+            "id": 6,
+            "question": "What is the main purpose of Flask's Blueprint?",
+            "option_1": "To handle database migrations",
+            "option_2": "To organize routes into modular components",
+            "option_3": "To create virtual environments",
+            "option_4": "To manage static files",
+            "correct_option": 2
+        },
+        {
+            "id": 7,
+            "question": "Which Python library is commonly used for making HTTP requests?",
+            "option_1": "httpclient",
+            "option_2": "requests",
+            "option_3": "urllib3",
+            "option_4": "pyhttp",
+            "correct_option": 2
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of Django's middleware?",
+            "option_1": "To process requests and responses globally",
+            "option_2": "To define URL patterns",
+            "option_3": "To create database models",
+            "option_4": "To handle user authentication",
+            "correct_option": 1
+        },
+        {
+            "id": 9,
+            "question": "Which database is NOT officially supported by Django?",
+            "option_1": "PostgreSQL",
+            "option_2": "MySQL",
+            "option_3": "SQLite",
+            "option_4": "MongoDB",
+            "correct_option": 4
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of Python's virtual environments?",
+            "option_1": "To create isolated Python environments for projects",
+            "option_2": "To visualize data",
+            "option_3": "To host web applications",
+            "option_4": "To manage server infrastructure",
+            "correct_option": 1
+        },
+        {
+            "id": 11,
+            "question": "Which command is used to run Flask applications?",
+            "option_1": "flask run",
+            "option_2": "python app.py",
+            "option_3": "flask start",
+            "option_4": "python run flask",
+            "correct_option": 1
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of Django's 'migrations'?",
+            "option_1": "To move the project to a different server",
+            "option_2": "To track and apply changes to database schema",
+            "option_3": "To migrate users between applications",
+            "option_4": "To change Python versions",
+            "correct_option": 2
+        },
+        {
+            "id": 13,
+            "question": "Which Python library is used for asynchronous programming?",
+            "option_1": "asyncpy",
+            "option_2": "asyncio",
+            "option_3": "aiohttp",
+            "option_4": "asyncawait",
+            "correct_option": 2
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the __init__.py file in Python?",
+            "option_1": "To initialize the Python interpreter",
+            "option_2": "To mark a directory as a Python package",
+            "option_3": "To define project dependencies",
+            "option_4": "To configure the development server",
+            "correct_option": 2
+        },
+        {
+            "id": 15,
+            "question": "Which framework is known as 'batteries-included' in Python web development?",
+            "option_1": "Flask",
+            "option_2": "FastAPI",
+            "option_3": "Django",
+            "option_4": "Pyramid",
+            "correct_option": 3
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of Django's 'manage.py' file?",
+            "option_1": "To manage database connections",
+            "option_2": "To provide command-line utilities for the project",
+            "option_3": "To handle user authentication",
+            "option_4": "To configure the web server",
+            "correct_option": 2
+        },
+        {
+            "id": 17,
+            "question": "Which Python library is commonly used for data serialization?",
+            "option_1": "jsonify",
+            "option_2": "pickle",
+            "option_3": "serializer",
+            "option_4": "marshmallow",
+            "correct_option": 4
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of Flask's 'context processors'?",
+            "option_1": "To process database queries",
+            "option_2": "To make variables available to all templates",
+            "option_3": "To handle CPU-intensive tasks",
+            "option_4": "To manage application configuration",
+            "correct_option": 2
+        },
+        {
+            "id": 19,
+            "question": "Which HTTP status code indicates 'Not Found'?",
+            "option_1": "200",
+            "option_2": "301",
+            "option_3": "404",
+            "option_4": "500",
+            "correct_option": 3
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of Django's 'signals'?",
+            "option_1": "To handle HTTP requests",
+            "option_2": "To allow decoupled applications to get notified of actions",
+            "option_3": "To manage static files",
+            "option_4": "To create API endpoints",
+            "correct_option": 2
+        },
+        {
+            "id": 21,
+            "question": "Which Python library is commonly used for API documentation (OpenAPI/Swagger)?",
+            "option_1": "flask-swagger",
+            "option_2": "drf-yasg",
+            "option_3": "fastapi",
+            "option_4": "All of the above",
+            "correct_option": 4
+        },
+        {
+            "id": 22,
+            "question": "What is the purpose of the 'requirements.txt' file?",
+            "option_1": "To list project dependencies",
+            "option_2": "To configure server requirements",
+            "option_3": "To define API requirements",
+            "option_4": "To specify Python version requirements",
+            "correct_option": 1
+        },
+        {
+            "id": 23,
+            "question": "Which command is used to create a new Django app within a project?",
+            "option_1": "python manage.py newapp",
+            "option_2": "django-admin startapp",
+            "option_3": "python manage.py startapp",
+            "option_4": "django create app",
+            "correct_option": 3
+        },
+        {
+            "id": 24,
+            "question": "What is the purpose of Flask's 'Jinja2' template engine?",
+            "option_1": "To handle database operations",
+            "option_2": "To generate dynamic HTML content",
+            "option_3": "To manage application configuration",
+            "option_4": "To handle HTTP requests",
+            "correct_option": 2
+        },
+        {
+            "id": 25,
+            "question": "Which Python framework is designed specifically for building APIs?",
+            "option_1": "Flask",
+            "option_2": "Django",
+            "option_3": "FastAPI",
+            "option_4": "Pyramid",
+            "correct_option": 3
+        }
+    ]
+}
